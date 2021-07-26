@@ -8,13 +8,13 @@
 
 // TESTS
 
-// All LEDs are off after initialized
-// Single one can be turned Off
-// Single One can be turned on
+// All LEDs are on till initialized  (/)
+// Single one can be turned Off -> (/)
+// Single One can be turned on -> (/)
 // Multiple LEDs can be tunred off/on (all)
-// Query LED state
-// Check boundry values
-// Check out of bounds values
+// Query LED state -> (/)
+// Check boundry values -> (x)
+// Check out of bounds values (x)
 
 #include "stdint.h"
 #include "LedDriver.h"
@@ -42,12 +42,20 @@ void LedDriver_TurnAllOff()
 
 void LedDriver_TurnLedOn(int ledNumber)
 {
-    ChangeLedState(ledNumber ,true);
+    ChangeLedState(ledNumber, true);
 }
 
 void LedDriver_TurnLedOff(int ledNumber)
 {
-    ChangeLedState(ledNumber ,false);
+    ChangeLedState(ledNumber, false);
+}
+
+bool LedDriver_GetLedState(int ledNumber)
+{
+    if (*ledArrayAddress & (1 << ledNumber))
+        return true;
+    else
+        return false;
 }
 
 static void ChangeLedState(uint16_t ledNumber, bool turnLedOn)

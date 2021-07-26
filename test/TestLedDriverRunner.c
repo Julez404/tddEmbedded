@@ -26,13 +26,14 @@
 
 #include "unity_fixture.h"
 
-#if 1 
+#if 1
 TEST_GROUP_RUNNER(LedDriver)
 {
     RUN_TEST_CASE(LedDriver, LedsOffAfterCreate);
     RUN_TEST_CASE(LedDriver, OneLedCanBeTurnedOn);
     RUN_TEST_CASE(LedDriver, TurnAllLedsOn)
     RUN_TEST_CASE(LedDriver, OneLedCanBeTurnedOff)
+    RUN_TEST_CASE(LedDriver, QueryLedStates);
     // RUN_TEST_CASE(LedDriver, TurnOnLedOne);
     // RUN_TEST_CASE(LedDriver, TurnOffLedOne);
     // RUN_TEST_CASE(LedDriver, TurnOnMultipleLeds);
@@ -50,7 +51,7 @@ TEST_GROUP_RUNNER(LedDriver)
     // RUN_TEST_CASE(LedDriver, AllOn);
     // RUN_TEST_CASE(LedDriver, AllOff);
 }
-#endif 
+#endif
 
 #if 0 
 TEST_GROUP_RUNNER(LedDriver)
@@ -58,7 +59,7 @@ TEST_GROUP_RUNNER(LedDriver)
     RUN_TEST_CASE(LedDriver, LedsOffAfterCreate);
     RUN_TEST_CASE(LedDriver, TurnOnLedOne);
 }
-#endif 
+#endif
 
 #if 0 
 TEST_GROUP_RUNNER(LedDriver)
@@ -67,11 +68,11 @@ TEST_GROUP_RUNNER(LedDriver)
     RUN_TEST_CASE(LedDriver, TurnOnLedOne);
     RUN_TEST_CASE(LedDriver, TurnOffLedOne);
 }
-#endif 
+#endif
 
 #if 0 
 TEST_GROUP_RUNNER(LedDriver)
 {
     RUN_TEST_CASE(LedDriver, LedsOffAfterCreate);
 }
-#endif 
+#endif
