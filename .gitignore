@@ -3,3 +3,4 @@
 /lib/*
 .vscode
 TddLearning_tests
+/build/*
